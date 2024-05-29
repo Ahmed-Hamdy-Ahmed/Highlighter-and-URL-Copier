@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Highlighter & URL Copier",
+  "version": "1.0",
+  "description": "This extension allows you to highlight text, copy the page URL along with the selected text and page title, and save the information. It includes timestamps for YouTube videos and creates highlight links on other websites. You can view the stored URLs directly in the popup, download them as a text file, and reset the stored URLs when needed.",
+  "permissions": ["activeTab", "storage", "downloads"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "copy.png",
+      "48": "copy.png",
+      "128": "copy.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}

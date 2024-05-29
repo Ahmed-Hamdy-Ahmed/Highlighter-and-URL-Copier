@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Highlighter & URL Copier</title>
+    <style>
+      /* Add some basic styling */
+      body {
+        font-family: Arial, sans-serif;
+        padding: 10px;
+        width: 90vw;
+      }
+      button {
+        display: block;
+        margin: 10px auto;
+        padding: 10px;
+        font-size: 16px;
+      }
+      #url-list {
+        margin-top: 20px;
+        white-space: pre-wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="copy-url">Copy URL</button>
+    <button id="download-urls">Download URLs</button>
+    <button id="reset-urls">Reset URLs</button>
+    <button id="view-urls">View URLs</button>
+    <div id="url-list"></div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
